@@ -14,7 +14,7 @@ console.log(obj2); //op: {key3: 'val3'}
 
 console.log(obj1.key1); //op: val1
 console.log(obj1.key2); //op: val2
-console.log(obj2.key3); //op: val
+console.log(obj2.key3); //op: val3
 
 //But if we access obj2.key1 or obj2.key2 => output will be undefined because we have not created key of that name.
 console.log(obj2.key1); //op: undefined

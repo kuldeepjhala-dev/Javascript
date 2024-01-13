@@ -13,7 +13,7 @@ function createUserobj(firstName, lastName, email, age, address) {
   user.is18 = function () {
     return this.age >= 18;
   };
-  return user;
+  return user; //obj is returned
 }
 
 const user1 = createUserobj(

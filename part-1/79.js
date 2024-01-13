@@ -10,7 +10,7 @@ console.log(hello.name); //op: hello => it returns the name of the function
 //Here we can see that we are accessing a property of hello which is name. It is working like object.
 
 //Note: function = function + empty object {}
-//whenever we create a function we get an empty object. That object an be used as property of that function.
+//whenever we create a function we get an empty object. That object can be used as property of that function.
 
 hello.kuldeep = function () {
   return "Kuldeep fuction is called";

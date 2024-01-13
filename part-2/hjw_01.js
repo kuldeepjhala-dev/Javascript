@@ -4,7 +4,7 @@
 //lexical scope means that the way we have written code defines the scope. eg: lexically firstName is declared in gloabl scope. It means where in what scope we have written the code
 
 //PHASE 1: Compilation phase, It has 3 types
-//1. Tocanizing/lexing - breaks  the code in small tokens and determines the scope of variables and functions.
+//1. Tocanizing/lexing - breaks the code in small tokens and determines the scope of variables and functions.
 //2. parsing - understands the tokens and generates Abstract syntax tree.
 //3. code generation
 
@@ -12,11 +12,11 @@
 //code has to pass through early error checking.
 //we need to know determining appropriate scope for the variable
 
-//inorder to perform above 2 task we compile code.
-
 //PHASE 2: Code Execution phase
 //javascript code executes inside execution context.
 //first execution context is global execution context.
+
+//inorder to perform above 2 task we compile code.
 
 //Gloabl execution context has 2 parts
 //1. Creation Phase (Gloabl memory)
@@ -30,5 +30,5 @@ console.log(this); //op: window{}
 console.log(window); //op: window{}
 console.log(firstName); //op: undefined
 // var firstName = ."kuldeep"; //op:Syntax error
-var firstName = "kuldeep"; //op:
+var firstName = "kuldeep"; 
 console.log(firstName); //op: kuldeep

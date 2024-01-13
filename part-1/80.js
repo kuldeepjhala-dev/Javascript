@@ -13,7 +13,7 @@
 function createUser(firstName, lastName, email, age, address) {
   // const user = Object.create(userMethods);
   //earlier we were passing userMethods objects where methods were stored, but now we are passing createUser.prototype object which is of createUser function, and there we have stored all the methods.
-  const user = Object.create(createUser.prototype);
+  const user = Object.create(createUser.prototype);  
   user.firstName = firstName;
   user.lastName = lastName;
   user.email = email;
@@ -21,7 +21,7 @@ function createUser(firstName, lastName, email, age, address) {
   user.address = address;
   return user;
 }
-//storing methods in function createUSe
+//storing methods in function createUSer
 createUser.prototype.about = function () {
   return `Hi my name is ${this.firstName} and I am ${this.age} years old.`;
 };

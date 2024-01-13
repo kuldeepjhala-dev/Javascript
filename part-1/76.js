@@ -10,7 +10,7 @@ const userMethods = {
 };
 
 function createUser(firstName, lastName, email, age, address) {
-  const user = {};
+  const user = {}; //empty obj created
   user.firstName = firstName;
   user.lastName = lastName;
   user.email = email;

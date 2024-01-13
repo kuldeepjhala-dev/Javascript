@@ -21,7 +21,7 @@
 // - all things are initilized inside global memory
 // - window object is always present.
 // - 'this' will point to window object.
-// - all variables first are initilized with 'undefined'
+// - all variables first are initilized with 'undefined'.
 // - function created with 'funciton' keyword will be added.
 //2. Code execution phase
 // - code will be executed line by line

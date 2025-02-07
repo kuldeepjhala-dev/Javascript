@@ -75,40 +75,74 @@
 //    World
 
 // => Asynchronous execution of the function. (Unexpected output)
-function orderFood(foodOrder) {
-    console.log("1. Order Accepted => ", foodOrder);
-    prepareOrder(foodOrder);
-    recieveFood();
-}
-function prepareOrder() {
-    setTimeout(function () {
-        console.log("2.Dear customer your order => ", foodOrder, " is ready!");
-    }, 1000);
-}
-function recieveFood() {
-    console.log("3. Thank you for orderng food from us please leave ratings!");
-}
-orderFood("sabji, rotli, chaas, athanu, papad, raitu, mava chiki, dal, rice");
+// function orderFood(foodOrder) {
+//     console.log("1. Order Accepted => ", foodOrder);
+//     prepareOrder(foodOrder);
+//     recieveFood();
+// }
+// function prepareOrder() {
+//     setTimeout(function () {
+//         console.log("2.Dear customer your order => ", foodOrder, " is ready!");
+//     }, 1000);
+// }
+// function recieveFood() {
+//     console.log("3. Thank you for orderng food from us please leave ratings!");
+// }
+// orderFood("sabji, rotli, chaas, athanu, papad, raitu, mava chiki, dal, rice");
 // op: (Unexpected output, not in ordered)
 // 1. Order Accepted => sabji, rotli, chaas, athanu, papad, raitu, mava chiki, dal, rice
 // 3. Thank you for orderng food from us please leave ratings!
 // 2.Dear customer your order => sabji, rotli, chaas, athanu, papad, raitu, mava chiki, dal, rice  is ready! (After 1 second it will be printed)
 
 // => Handling Asynchronous function to get desired output. By passing callback function. (Expected output)
-function orderFood(foodOrder) {
-    console.log("1. Order Accepted => ", foodOrder);
-    prepareOrder(foodOrder, recieveFood);
-}
-function prepareOrder(foodOrder, cbRecieveFood) {
-    setTimeout(function () {
-        console.log("2.Dear customer your order => ", foodOrder, " is ready!");
-        cbRecieveFood();
-    }, 1000);
-}
-function recieveFood() {
-    console.log("3. Thank you for orderng food from us please leave ratings!");
-}
-orderFood("sabji, rotli, chaas, athanu, papad, raitu, mava-chiki, dal, rice");
+// function orderFood(foodOrder) {
+//     console.log("1. Order Accepted => ", foodOrder);
+//     prepareOrder(foodOrder, recieveFood);
+// }
+// function prepareOrder(foodOrder, cbRecieveFood) {
+//     setTimeout(function () {
+//         console.log("2.Dear customer your order => ", foodOrder, " is ready!");
+//         cbRecieveFood();
+//     }, 1000);
+// }
+// function recieveFood() {
+//     console.log("3. Thank you for orderng food from us please leave ratings!");
+// }
+// orderFood("sabji, rotli, chaas, athanu, papad, raitu, mava-chiki, dal, rice");
 // 1. Order Accepted => sabji, rotli, chaas, athanu, papad, raitu, mava - chiki, dal, rice
 // 2.Dear customer your order => sabji, rotli, chaas, athanu, papad, raitu, mava - chiki, dal, rice  is ready! (After 1 second it will be printed)
 // 3. Thank you for orderng food from us please leave ratings! (After 1.0001 second it will be printed)
+
+// => Example of callback function
+// studentsArray = [
+//     { name: "kuldeep", country: "India", score: "100", exam: "Math" },
+//     { name: "Raj", country: "USA", score: "93", exam: "English" },
+//     { name: "Mohan", country: "India", score: "82", exam: "Math" },
+//     { name: "Akash", country: "USA", score: "22", exam: "Math" },
+//     { name: "Avkash", country: "India", score: "32", exam: "Math" },
+//     { name: "Rakesh", country: "India", score: "30", exam: "Hindi" },
+// ];
+// function processStudents(data, subject, callback) {
+//     for (let i = 0; i < data.length; i++) {
+//         //selecting students of subject 'math'
+//         if (data[i].exam.toLowerCase() === subject.toLowerCase()) {
+//             if (typeof callback === "function") {
+//                 //passing that student data to the callback function
+//                 callback(data[i]);
+//             }
+//         }
+//     }
+// }
+// function checkStudentPass(studentObject) {
+//     if (studentObject.score >= 60) {
+//         console.log(
+//             `${studentObject.name} has passed the ${studentObject.exam} exam`,
+//         );
+//     } else {
+//         console.log(
+//             `${studentObject.name} has failed the ${studentObject.exam} exam`,
+//         );
+//     }
+// }
+// processStudents(studentsArray, "math", checkStudentPass);
+

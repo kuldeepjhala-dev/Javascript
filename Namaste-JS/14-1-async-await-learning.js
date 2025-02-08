@@ -57,25 +57,25 @@
 
 // => Code phat jayega
 const p1 = new Promise((resolve, reject) => {
-	setTimeout(() => {
-		console.log(44);
-		resolve("Promise-1 data");
-	}, 10000);
+    setTimeout(() => {
+        console.log(44);
+        resolve("Promise-1 data");
+    }, 10000);
 });
 const p2 = new Promise((resolve, reject) => {
-	setTimeout(() => {
-		console.log(77);
-		resolve("Promise-2 data");
-	}, 5000);
+    setTimeout(() => {
+        console.log(77);
+        resolve("Promise-2 data");
+    }, 5000);
 });
 async function demo() {
-	console.log(2);
-	const p1Data = await p1;
-	console.log(5);
-	console.log(6, p1Data);
-	const p2Data = await p2;
-	console.log(8, p2Data);
-	console.log(9);
+    console.log(2);
+    const p1Data = await p1;
+    console.log(5);
+    console.log(6, p1Data);
+    const p2Data = await p2;
+    console.log(8, p2Data);
+    console.log(9);
 }
 console.log("1");
 demo();

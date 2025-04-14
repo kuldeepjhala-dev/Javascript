@@ -123,3 +123,8 @@ const query = "react";
 const isLoading2 = false;
 query.length >= 3 && !isLoading2 && console.log("Trigger search");
 //op: Trigger search
+
+//eg - 21 (logic of and operator)
+const a = null;
+const b = true;
+console.log(b && a)
